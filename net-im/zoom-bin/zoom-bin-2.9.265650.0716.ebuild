@@ -18,12 +18,13 @@ KEYWORDS="~amd64"
 
 RESTRICT="mirror"
 
-IUSE="pulseaudio"
+IUSE="pulseaudio sso"
 
 QA_PREBUILT="opt/zoom/*"
 
 RDEPEND="${DEPEND}
 	pulseaudio? ( media-sound/pulseaudio )
+	sso? ( dev-qt/qtwebengine )
 	dev-db/sqlite
 	dev-db/unixODBC
 	dev-libs/glib
@@ -36,7 +37,6 @@ RDEPEND="${DEPEND}
 	x11-libs/libXcomposite
 	x11-libs/libXi
 	x11-libs/libXrender
-	dev-qt/qtwebengine
 	dev-qt/qtsvg"
 DEPEND="${RDEPEND}
 	app-admin/chrpath
